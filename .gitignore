@@ -9,4 +9,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 .env
+composer.lock
 /public/assets
+/resources/views/vendor
+

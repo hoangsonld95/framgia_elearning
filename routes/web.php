@@ -41,3 +41,7 @@ Route::delete('/admin/courses/{id}','CourseController@deleteCourse')->name('admi
 
 Route::get('/admin/users', 'UserController@getUsers')->name('admin_users');
 Route::delete('/admin/users/{id}','UserController@deleteUser');
+Route::get('/course/{course_id}', 'Auth\CourseController@showCourse')->name('course_user');
+Route::post('/course/{course_id}', 'Auth\CourseController@showCourse');
+Route::get('/admin/users', 'UserController@getUsers')->name('admin_users');
+Route::delete('/admin/users/{id}','UserController@deleteUser');
