@@ -40,7 +40,7 @@
                                 </td>
                                 <td>
 
-                                    {!! Form::open(['action' => ['CourseController@deleteCourse', $element->id],
+                                    {!! Form::open(['action' => ['Admin\CourseController@deleteCourse', $element->id],
                                         'method' => 'post']) !!}
                                     {!! Form::hidden('_method', 'DELETE') !!}
                                     {!! Form::submit(trans('admin_courses.delete-course')) !!}

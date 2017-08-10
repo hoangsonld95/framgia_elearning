@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Models\Subject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -9,7 +10,7 @@ use App\Http\Controllers\Controller;
 class SubjectController extends Controller
 {
     public function getSubjects() {
-        $data = \App\Models\Subject::get();
+        $data = Subject::get();
 
         return view('admin.contents.subjects', ['data' => $data]);
     }
@@ -24,7 +25,7 @@ class SubjectController extends Controller
         // If subject is deleted, all the course will be deleted too
 
         $deletedCourse = \App\Models\Course::where('subject_id', '=', $subject_id)->delete();
-        $deletedSubject = \App\Models\Subject::where('id', '=', $subject_id)->delete();
+        $deletedSubject = Subject::where('id', '=', $subject_id)->delete();
 
         return redirect()->route('admin_subjects');
     }

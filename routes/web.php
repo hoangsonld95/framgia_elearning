@@ -29,20 +29,17 @@ Route::get('/profile/edit', 'Auth\ProfileController@editProfile')->name('edit_pr
 Route::post('/profile/save', 'Auth\ProfileController@saveProfile')->name('profile-save');
 
 Route::get('/admin/homepage', 'Admin\HomePageController@homepage')->name('admin_homepage');
-Route::get('/admin/overview', 'OverViewController@overview')->name('admin_overview');
-Route::get('/admin/homepage', 'HomePageController@homepage')->name('admin_homepage');
-Route::get('/admin/overview', 'OverViewController@overview')->name('admin_overview');
+Route::get('/admin/overview', 'Admin\OverViewController@overview')->name('admin_overview');
 
-Route::get('/admin/subjects','SubjectController@getSubjects')->name('admin_subjects');
-Route::patch('/admin/subjects/{id}', 'SubjectController@editSubject')->name('admin_edit_subject');
-Route::delete('/admin/subjects/{id}','SubjectController@deleteSubject')->name('admin_delete_subject');
+Route::get('/admin/subjects','Admin\SubjectController@getSubjects')->name('admin_subjects');
+Route::patch('/admin/subjects/{id}', 'Admin\SubjectController@editSubject')->name('admin_edit_subject');
+Route::delete('/admin/subjects/{id}','Admin\SubjectController@deleteSubject')->name('admin_delete_subject');
 
-Route::get('/admin/courses','CourseController@getCourses')->name('admin_courses');
-Route::delete('/admin/courses/{id}','CourseController@deleteCourse')->name('admin_delete_course');
+Route::get('/admin/courses','Admin\CourseController@getCourses')->name('admin_courses');
+Route::delete('/admin/courses/{id}','Admin\CourseController@deleteCourse')->name('admin_delete_course');
 
-Route::get('/admin/users', 'UserController@getUsers')->name('admin_users');
-Route::delete('/admin/users/{id}','UserController@deleteUser');
+Route::get('/admin/users', 'Admin\UserController@getUsers')->name('admin_users');
+Route::delete('/admin/users/{id}','Admin\UserController@deleteUser');
 Route::get('/course/{course_id}', 'Auth\CourseController@showCourse')->name('course_user');
 Route::post('/course/{course_id}', 'Auth\CourseController@showCourse');
-Route::get('/admin/users', 'UserController@getUsers')->name('admin_users');
-Route::delete('/admin/users/{id}','UserController@deleteUser');
+Route::get('list_course/{course_id}', 'Auth\CourseController@listCourse')->name('list_course');

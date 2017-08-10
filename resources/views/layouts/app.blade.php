@@ -50,22 +50,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" class="site-nav-sub"><i
-                                    class="fa fa-angle-down site-nav-arrow"></i>COURSE</a>
-                        <ul>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <li>
-                                <a href="#">Blog Post</a>
-                            </li>
-                            <li>
-                                <a href="3">Portfolio 4 Columns</a>
-                            </li>
-                            <li>
-                                <a href="#">Portfolio 3 Columns</a>
-                            </li>
-                        </ul>
+                        <a href="{{route('list_course', 1)}}">COURSE</a>
                     </li>
                     <li>
                         <a href="javascript:void(0)" class="site-nav-sub"><i

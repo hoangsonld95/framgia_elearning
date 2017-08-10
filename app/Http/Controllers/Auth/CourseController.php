@@ -10,8 +10,10 @@ namespace App\Http\Controllers\Auth;
 
 
 use App\Models\Answer;
+use App\Models\Course;
 use App\Models\Question;
 use App\Models\StudentAnswerQuestionExact;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use JavaScript;
@@ -41,5 +43,12 @@ class CourseController
             return response(['msg' => $correct_question]);
         }
         return view('auth.course', ['list_question' => $list_question]);
+    }
+    public function listCourse($course_id) {
+        $subjects = Subject::all();
+        foreach ($subjects as $subject) {
+            $subject->courses = Course::where('subject_id', $subject['id'])->get();
+        }
+        return view('auth.listCourse',['subjects' => $subjects]);
     }
 }
