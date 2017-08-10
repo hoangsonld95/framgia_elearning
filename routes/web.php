@@ -28,7 +28,7 @@ Route::get('/profile', 'Auth\ProfileController@showProfile')->name('show_profile
 Route::get('/profile/edit', 'Auth\ProfileController@editProfile')->name('edit_profile');
 Route::post('/profile/save', 'Auth\ProfileController@saveProfile')->name('profile-save');
 
-Route::get('/admin/homepage', 'HomePageController@homepage')->name('admin_homepage');
+Route::get('/admin/homepage', 'Admin\HomePageController@homepage')->name('admin_homepage');
 Route::get('/admin/overview', 'OverViewController@overview')->name('admin_overview');
 Route::get('/admin/homepage', 'HomePageController@homepage')->name('admin_homepage');
 Route::get('/admin/overview', 'OverViewController@overview')->name('admin_overview');
