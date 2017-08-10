@@ -34,6 +34,7 @@ Route::get('/admin/homepage', 'HomePageController@homepage')->name('admin_homepa
 Route::get('/admin/overview', 'OverViewController@overview')->name('admin_overview');
 
 Route::get('/admin/subjects','SubjectController@getSubjects')->name('admin_subjects');
+Route::patch('/admin/subjects/{id}', 'SubjectController@editSubject')->name('admin_edit_subject');
 Route::delete('/admin/subjects/{id}','SubjectController@deleteSubject')->name('admin_delete_subject');
 
 Route::get('/admin/courses','CourseController@getCourses')->name('admin_courses');
