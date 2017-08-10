@@ -33,6 +33,13 @@
 
                                     <td>
                                         <div class="btn-group">
+                                            @include('admin.contents.edit_modal')
+                                        </div>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="btn-group">
                                             {!! Form::open(['action' => ['SubjectController@deleteSubject', $element->id],
                                                 'method' => 'post']) !!}
                                             {!! Form::hidden('_method', 'DELETE') !!}
