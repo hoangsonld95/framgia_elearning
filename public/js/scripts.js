@@ -6,36 +6,6 @@ function initializeJS() {
     //popovers
     $('.popovers').popover();
 
-    //custom scrollbar
-    //for html
-    $("html").niceScroll({
-        styler: "fb",
-        cursorcolor: "#007AFF",
-        cursorwidth: '6',
-        cursorborderradius: '10px',
-        background: '#F7F7F7',
-        cursorborder: '',
-        zindex: '1000'
-    });
-    //for sidebar
-    $("#sidebar").niceScroll({
-        styler: "fb",
-        cursorcolor: "#007AFF",
-        cursorwidth: '3',
-        cursorborderradius: '10px',
-        background: '#F7F7F7',
-        cursorborder: ''
-    });
-    // for scroll panel
-    $(".scroll-panel").niceScroll({
-        styler: "fb",
-        cursorcolor: "#007AFF",
-        cursorwidth: '3',
-        cursorborderradius: '10px',
-        background: '#F7F7F7',
-        cursorborder: ''
-    });
-
     //sidebar dropdown menu
     $('#sidebar .sub-menu > a').click(function () {
         var last = $('.sub-menu.open', $('#sidebar'));
@@ -96,7 +66,7 @@ function initializeJS() {
             });
             $("#container").removeClass("sidebar-closed");
         }
-        );
+    });
 
     //bar chart
     if ($(".custom-custom-bar-chart")) {
@@ -110,7 +80,71 @@ function initializeJS() {
     }
 
 }
+function updateSubject() {
+    $("#update-subject").on('click', function () {
+        if($("#subject-name").val() == "" || $("#subject-name").val() == "") {
+            alert("Can't Blank");
+        }
+        else {
+            $.ajax({
+                url: "",
+                method: 'PUT',
+                data: {
+                    'id' : $("#subject-id").val(),
+                    'name' : $("#subject-name").val(),
+                    'description' : $("textarea#subject-description").val()
+                },
+                success: function(data) {
+                    console.log(data);
+                    window.location.reload();
+                },
+                error: function(data) {
+                    console.log("Error");
+                }
+            });
+        }
+    });
+}
+
+function createSubject() {
+    $("#create-subject").on('click', function () {
+        if($("#create-subject-name").val() == "" || $("#create-subject-name").val() == "") {
+            alert("Can't Blank");
+        }
+        else {
+            $.ajax({
+                url: "",
+                method: 'POST',
+                data: {
+                    'name' : $("#create-subject-name").val(),
+                    'description' : $("textarea#create-subject-description").val()
+                },
+                success: function(data) {
+                    console.log(data);
+                    window.location.reload();
+                },
+                error: function(data) {
+                    console.log("Error");
+                }
+            });
+        }
+    });
+}
 
 $(document).ready(function () {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     initializeJS();
+    updateSubject();
+    createSubject();
+    $(".id-1").on("click", function () {
+        var data = $(this).val();
+        var object = JSON.parse(data);
+        $("#subject-name").val(object.name);
+        $("#subject-description").val(object.description);
+        $("#subject-id").attr("value", object.id);
+    });
 });

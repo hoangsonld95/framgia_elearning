@@ -15,13 +15,16 @@
 
                         <br>
                         <br>
+                        <div>
+                            @include('admin.contents.create_modal')
+                        </div>
 
                         <table class="table table-striped table-advance table-hover">
                             <tbody>
                             <tr>
                                 <th><i class="icon_profile"></i>{{ trans('admin_subjects.name') }}</th>
                                 <th><i class="icon_star"></i> {{ trans('admin_subjects.description') }} </th>
-                                <th><i class="icon_adjust-horiz"></i>{{ trans('admin_subjects.edit') }}</th>
+                                <th><i class="icon_adjust-horiz"></i>{{ trans('admin_subjects.edit-subject') }}</th>
                                 <th><i class="icon_cogs"></i>{{ trans('admin_subjects.delete') }}</th>
                             </tr>
 
@@ -32,7 +35,7 @@
                                     <td> {{ $element->description }}</td>
 
                                     <td>
-                                        <div class="btn-group">
+                                        <div>
                                             @include('admin.contents.edit_modal')
                                         </div>
                                     </td>
@@ -43,7 +46,7 @@
                                             {!! Form::open(['action' => ['Admin\SubjectController@deleteSubject', $element->id],
                                                 'method' => 'post']) !!}
                                             {!! Form::hidden('_method', 'DELETE') !!}
-                                            {!! Form::submit(trans('admin_subjects.delete-subject')) !!}
+                                            {!! Form::submit(trans('admin_subjects.delete-subject'), ['class' => "btn btn-danger"]) !!}
                                             {!! Form::close() !!}
                                         </div>
                                     </td>
