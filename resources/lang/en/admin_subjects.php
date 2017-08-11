@@ -6,5 +6,6 @@ return array(
     "edit-subject" => "Edit Subject",
     "delete" => "Delete",
     "delete-subject" => "Delete Subject",
+    "create-subject" => "Create Subject",
 );
 ?>

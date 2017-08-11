@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class HomePageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest:admin');
+    }
+
     public function homepage(){
         return view('admin.contents.homepage');
     }

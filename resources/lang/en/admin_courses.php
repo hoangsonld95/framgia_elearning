@@ -7,5 +7,6 @@ return array(
     "edit" => "Edit",
     "delete" => "Delete",
     "delete-course" => "Delete Course",
+    "update-course" => "Update Course",
 );
 ?>

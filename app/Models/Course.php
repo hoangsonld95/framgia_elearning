@@ -21,6 +21,7 @@ class Course extends BaseModel
         'hidden',
         'admin_id',
         'subject_id',
+        'desc',
     ];
 
     public function questions()

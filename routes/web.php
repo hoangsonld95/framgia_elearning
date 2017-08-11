@@ -32,11 +32,14 @@ Route::get('/admin/homepage', 'Admin\HomePageController@homepage')->name('admin_
 Route::get('/admin/overview', 'Admin\OverViewController@overview')->name('admin_overview');
 
 Route::get('/admin/subjects','Admin\SubjectController@getSubjects')->name('admin_subjects');
-Route::patch('/admin/subjects/{id}', 'Admin\SubjectController@editSubject')->name('admin_edit_subject');
+Route::put('/admin/subjects', 'Admin\SubjectController@editSubject')->name('admin_edit_subject');
 Route::delete('/admin/subjects/{id}','Admin\SubjectController@deleteSubject')->name('admin_delete_subject');
+Route::post('/admin/subjects', 'Admin\SubjectController@createSubject')->name('admin_create_subject');
 
 Route::get('/admin/courses','Admin\CourseController@getCourses')->name('admin_courses');
 Route::delete('/admin/courses/{id}','Admin\CourseController@deleteCourse')->name('admin_delete_course');
+Route::put('/admin/courses', 'Admin\CourseController@editCourse')->name('admin_edit_course');
+Route::post('/admin/courses', 'Admin\CourseController@createCourse')->name('admin_create_course');
 
 Route::get('/admin/users', 'Admin\UserController@getUsers')->name('admin_users');
 Route::delete('/admin/users/{id}','Admin\UserController@deleteUser');

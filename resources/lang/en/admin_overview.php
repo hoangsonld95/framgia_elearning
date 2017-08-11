@@ -5,6 +5,6 @@ return array(
     "overview" => "OverView",
     "courses" => "Courses",
     "users" => "Users",
-    "multiple-choice-questions" => "Multiple-Choice Questions",
+    "multiple-choice-questions" => "Questions",
     "administrators" => "Administrator",
 );
