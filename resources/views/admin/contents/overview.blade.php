@@ -16,6 +16,14 @@
                     </div>
                 </div>
 
+                <div class="row" id="home_page">
+                    <h1 class="text-center">Welcome to Admin Page</h1>
+                    <img class="img_index" src="http://www.aspiretransforms.com/wp-content/uploads/2016/01/education-banner.jpg">
+                </div>
+
+                <br>
+                <br>
+
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="info-box blue-bg">
@@ -50,26 +58,17 @@
                     </div>
                 </div>
 
-                <div class="page-content-inner">
-                    <header class="entry-header gi-bold">
-                        <h2 class="entry-title fa fa-anchor FontBig">{{ trans("admin_overview.overview") }}</h2>
-                        <br>
-                        <br>
-                    </header>
+                <pre style="font-size: 20px">
+                    Đây là trang quản trị E-Learning Framgia. Các khoá học tiếng Anh được thiết kế theo hình thức trắc nghiệm 
+                </pre>
 
-                    <div class="entry-content text-sans-serif">
-                        <p style="text-align: justify;">Chào mừng các bạn đã đến với Framgia E-Learning !</p>
-                        <br>
-                        <p style="text-align: justify;">Đây là trang web về học ngoại ngữ. Các khoá học được thiết kế trên nền tảng web.</p>
-                        <p style="text-align: justify;">Có 4 khoá học về Tiếng Anh và Tiếng Nhật.</p>
-                        <br>
-                        <p style="text-align: justify; text-indent: 50px">1. Tiếng Anh sơ cấp</p>
-                        <p style="text-align: justify; text-indent: 50px">2. Tiếng Anh trung cấp</p>
-                        <p style="text-align: justify; text-indent: 50px">3. Tiếng Nhật sơ cấp</p>
-                        <p style="text-align: justify; text-indent: 50px">4. Tiếng Nhật trung cấp</p>
-                    </div>
+                
+                
 
-                </div>
+                     
+
+                
+                
 
             </section>
         </section>

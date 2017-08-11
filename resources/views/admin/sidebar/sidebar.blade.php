@@ -3,12 +3,6 @@
     <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-            <li class="active">
-                <a class="" href="{{route('admin_homepage')}}">
-                    <i class="icon_house_alt"></i>
-                    <span>{{ trans('admin_sidebar.homepage') }}</span>
-                </a>
-            </li>
 
             <li>
                 <a class="" href="{{route('admin_overview')}}">
