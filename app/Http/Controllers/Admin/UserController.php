@@ -8,7 +8,10 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
     public function getUsers()
     {
         $data = \App\Models\User::get();

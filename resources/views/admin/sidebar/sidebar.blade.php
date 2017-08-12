@@ -25,6 +25,12 @@
                 </a>
             </li>
 
+            <li>
+                <a class="" href="{{route('admin_questions')}}">
+                    <i class="icon_document_alt"></i>
+                    <span>{{ trans('admin_sidebar.question') }}</span>
+                </a>
+            </li>
 
             <li>
                 <a class="" href="{{route('admin_users')}}">

@@ -9,7 +9,7 @@ class HomePageController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('guest:admin');
+        $this->middleware('admin');
     }
 
     public function homepage(){

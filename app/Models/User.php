@@ -22,6 +22,7 @@ class User extends Authenticatable
         'point',
         'avatar',
         'active',
+        'is_admin',
     ];
 
     /**
