@@ -38,6 +38,8 @@ Route::post('/admin/subjects', 'Admin\SubjectController@createSubject')->name('a
 
 Route::get('/admin/courses','Admin\CourseController@getCourses')->name('admin_courses');
 Route::delete('/admin/courses/{id}','Admin\CourseController@deleteCourse')->name('admin_delete_course');
+Route::put('/admin/courses', 'Admin\CourseController@editCourse')->name('admin_edit_course');
+Route::post('/admin/courses', 'Admin\CourseController@createCourse')->name('admin_create_course');
 
 Route::get('/admin/users', 'Admin\UserController@getUsers')->name('admin_users');
 Route::delete('/admin/users/{id}','Admin\UserController@deleteUser');

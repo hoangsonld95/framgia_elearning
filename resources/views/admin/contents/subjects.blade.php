@@ -42,13 +42,14 @@
 
 
                                     <td>
-                                            <div class="btn-group">
-                                                {!! Form::open(['action' => ['Admin\SubjectController@deleteSubject', $element->id],
-                                                    'method' => 'post']) !!}
-                                                {!! Form::hidden('_method', 'DELETE') !!}
-                                                {!! Form::submit(trans('admin_subjects.delete-subject'), ['class' => "btn btn-danger"]) !!}
-                                                {!! Form::close() !!}
-                                            </div>
+
+                                        <div class="btn-group">
+                                            {!! Form::open(['action' => ['Admin\SubjectController@deleteSubject', $element->id],
+                                                'method' => 'post']) !!}
+                                            {!! Form::hidden('_method', 'DELETE') !!}
+                                            {!! Form::submit(trans('admin_subjects.delete-subject'), ['class' => "btn btn-danger"]) !!}
+                                            {!! Form::close() !!}
+                                        </div>
                                     </td>
                                 </tr>
 

@@ -15,6 +15,7 @@ use Illuminate\Notifications\Notifiable;
 class Admin extends BaseModel
 {
     use Notifiable;
+    protected $guard = 'admin';
     protected $table = 'admins';
 
     protected $fillable = [

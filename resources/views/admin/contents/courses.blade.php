@@ -17,9 +17,8 @@
                         <br>
 
                         <div>
-                            @include('admin.contents.create_modal')
+                            @include('admin.contents.createCourse_modal')
                         </div>
-
                         <table class="table table-striped table-advance table-hover">
                             <tbody>
                             <tr>
@@ -35,16 +34,18 @@
                             <tr>
                                 <td> {{ $element->name }} </td>
                                 <td> {{ $element->subject->name }} </td>
-                                <td> {{ $element->subject->description }}</td>
+                                <td> {{ $element->desc }}</td>
                                 <td>
-                                    @include('admin.contents.edit_modal')
+                                    <div>
+                                        @include('admin.contents.editCourse_modal')
+                                    </div>
                                 </td>
                                 <td>
                                 <div class="btn-group">
                                     {!! Form::open(['action' => ['Admin\CourseController@deleteCourse', $element->id],
                                         'method' => 'post']) !!}
                                     {!! Form::hidden('_method', 'DELETE') !!}
-                                    {!! Form::submit(trans('admin_courses.delete-course'), ['class' => 'btn btn-danger']) !!}
+                                    {!! Form::submit(trans('admin_courses.delete-course'), ['class' => "btn btn-danger"]) !!}
                                     {!! Form::close() !!}
                                 </div>    
                                 </td>

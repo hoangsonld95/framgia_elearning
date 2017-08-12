@@ -23,33 +23,6 @@
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
 
-            <!-- user login dropdown start-->
-            <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
-                            </span>
-                    <span class="username">#</span>
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu extended logout">
-                    <div class="log-arrow-up"></div>
-                    <li class="eborder-top">
-                        <a href="#"><i class="icon_profile"></i>{{ trans('admin_header.my-profile') }}</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon_mail_alt"></i>{{ trans('admin_header.my-inbox') }}</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon_clock_alt"></i>{{ trans('admin_header.timeline') }}</a>
-                    </li>
-                    <li>
-                        <a href="login.html"><i class="icon_key_alt"></i>{{ trans('admin_header.logout') }}</a>
-                    </li>
-
-                </ul>
-            </li>
-            <!-- user login dropdown end -->
         </ul>
         <!-- notificatoin dropdown end-->
     </div>

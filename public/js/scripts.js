@@ -131,6 +131,68 @@ function createSubject() {
     });
 }
 
+function editCourse() {
+    var object;
+    $(".edit-course").click(function () {
+        var data = $(this).val();
+        object = JSON.parse(data);
+        $("#edit-course-name").val(object.name);
+        $("#edit-course-description").val(object.desc);
+        $("#edit-course-id").attr("value", object.id);
+    });
+    $("#update-course").on('click', function () {
+        if($("#edit-course-name").val() == "" || $("#edit-course-description").val() == "") {
+            alert("Can't Blank");
+        }
+        else {
+            $.ajax({
+                url: "",
+                method: 'PUT',
+                data: {
+                    'old_subject_id' : object.subject.id,
+                    'new_subject_id' : $('.selectpicker').val(),
+                    'id' : $("#edit-course-id").val(),
+                    'name' : $("#edit-course-name").val(),
+                    'description' : $("textarea#edit-course-description").val()
+                },
+                success: function(data) {
+                    console.log(data);
+                    window.location.reload();
+                },
+                error: function(data) {
+                    console.log("Error");
+                }
+            });
+        }
+    });
+}
+
+function createCourse() {
+    $("#create-course").on('click', function () {
+        if($("#create-course-name").val() == "" || $("#create-course-description").val() == "") {
+            alert("Can't Blank");
+        }
+        else {
+            $.ajax({
+                url: "",
+                method: 'POST',
+                data: {
+                    'subject_id': $(".selectpicker").val(),
+                    'name' : $("#create-course-name").val(),
+                    'description' : $("textarea#create-course-description").val()
+                },
+                success: function(data) {
+                    console.log(data);
+                    window.location.reload();
+                },
+                error: function(data) {
+                    console.log("Error");
+                }
+            });
+        }
+    });
+}
+
 $(document).ready(function () {
     $.ajaxSetup({
         headers: {
@@ -140,6 +202,8 @@ $(document).ready(function () {
     initializeJS();
     updateSubject();
     createSubject();
+    editCourse();
+    createCourse();
     $(".id-1").on("click", function () {
         var data = $(this).val();
         var object = JSON.parse(data);
