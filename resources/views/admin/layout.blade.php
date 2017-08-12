@@ -48,6 +48,7 @@
     @yield('users')
     @yield('courses')
     @yield('subjects')
+    @yield('questions')
 
 </section>
 

@@ -43,16 +43,10 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-//        Admin::create(['full_name' => 'Admin', 'email' => 'admin@gmail.com', 'password' => bcrypt('12345678'), 'active' => true, 'avatar' => 'admin.jpg']);
         $input = $request->all();
         $email = $input['email'];
         $password = $input['password'];
-        $admin = Admin::where('email', $email)
-            ->where('active', 1)->first();
-        if($admin && Hash::check($password, $admin['password'])) {
-            return redirect('admin/homepage');
-        }
-        if (Auth::attempt(['email' => $email, 'password' => $password, 'active' => 1])) {
+        if (Auth::attempt(['email' => $email, 'password' => $password, 'active' => 1, 'is_admin' => 0])) {
             return view('home')->with('login_status', 'You are logined.');
         } else
             return redirect()->back()->with('login_status', 'Email or Password missing.');

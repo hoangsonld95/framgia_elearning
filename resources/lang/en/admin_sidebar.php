@@ -5,4 +5,5 @@ return array(
     "subjects" => "Subjects",
     "courses" => "Courses",
     "users_list" => "User List",
+    "question" => "Question",
 );

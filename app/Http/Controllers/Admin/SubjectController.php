@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 
 class SubjectController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
     public function getSubjects() {
         $data = Subject::where('hidden', 0)->get();
         return view('admin.contents.subjects', ['data' => $data]);
