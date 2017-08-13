@@ -34,12 +34,13 @@
                                         <img src="/public/img/avatar1.jpg" alt="" border="3" height="100" width="100"/>
                                     </td>
                                     <td>
-                                        <form action="/admin/users/{{ $element->id }}" method="post">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
-                                            <button>{{ trans('admin_users.delete-user') }}</button>
-                                        </form>
+                                        {!! Form::open(['action' => ['Admin\UserController@deleteUser', $element->id],
+                                            'method' => 'post']) !!}
+                                        {!! Form::hidden('_method', 'DELETE') !!}
+                                        {!! Form::submit(trans('admin_users.delete-user'), ['class' => "btn btn-danger"]) !!}
+                                        {!! Form::close() !!}
                                     </td>
+
                                 </tr>
 
                             @endforeach

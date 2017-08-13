@@ -49,7 +49,7 @@
     @yield('courses')
     @yield('subjects')
     @yield('questions')
-
+    @yield('edit_question')
 </section>
 
 </body>

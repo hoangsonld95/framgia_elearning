@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -48,6 +48,9 @@ Route::post('/course/{course_id}', 'Auth\CourseController@showCourse');
 Route::get('list_course/{course_id}', 'Auth\CourseController@listCourse')->name('list_course');
 
 Route::get('/admin/questions', 'Admin\QuestionController@index')->name('admin_questions');
+Route::get('/admin/questions/{question_id}', 'Admin\QuestionController@editQuestion')->name('admin_edit_question');
+Route::delete('/admin/questions/{question_id}','Admin\QuestionController@deleteQuestion')->name('admin_delete_Question');
+
 Route::get('/admin/login', 'Admin\LoginController@index');
 Route::post('/admin/login', 'Admin\LoginController@login')->name('admin_login');
 Route::get('/admin/logout', 'Admin\LoginController@adminLogout')->name('admin_logout');
