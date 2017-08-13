@@ -7,5 +7,6 @@ return array(
     'type' => 'Type',
     'delete' => 'Delete',
     'edit' => 'Edit',
+    'edit_answer' => 'Edit this answer',
 );
 ?>

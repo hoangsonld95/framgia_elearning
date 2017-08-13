@@ -50,6 +50,7 @@
     @yield('subjects')
     @yield('questions')
     @yield('edit_question')
+    @yield('create_answer')
 </section>
 
 </body>

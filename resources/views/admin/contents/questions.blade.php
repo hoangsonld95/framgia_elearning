@@ -8,7 +8,7 @@
                         <header class="panel-heading">
                             <h3 class="fa fa-book">{{ trans('admin_subjects.subject-list') }}</h3>
                         </header>
-
+                        @include('admin.contents.create_question')
                         <br>
                         <br>
                         <table class="table table-striped table-advance table-hover">

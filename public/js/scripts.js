@@ -192,6 +192,33 @@ function createCourse() {
         }
     });
 }
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        var id_img = input.id;
+        reader.onload = function (e) {
+            console.log(input.value);
+            $('#answer-img-' + id_img)
+                .attr('src', e.target.result)
+                .width(100)
+                .height(100);
+            $('#new-answer-img')
+                .attr('src', e.target.result)
+                .width(100)
+                .height(100);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function deleteAnswer() {
+    $(".delete-answer").click(function () {
+        var parent_id = this.id.split("-");
+        $("#answer-box-" + parent_id[3]).remove();
+        $("#" + parent_id[3]).attr("value", "delete");
+        $("#answer-content-" + parent_id[3]).attr('value', "");
+    });
+}
 
 $(document).ready(function () {
     $.ajaxSetup({
@@ -204,6 +231,7 @@ $(document).ready(function () {
     createSubject();
     editCourse();
     createCourse();
+    deleteAnswer();
     $(".id-1").on("click", function () {
         var data = $(this).val();
         var object = JSON.parse(data);
