@@ -89,8 +89,12 @@ table tr th { color: #688a7e;}
     height: 100%;
 
 }
-
-
+#box-create-answer {
+    height: 320px;
+}
+#box-create-question {
+    height: 250px;
+}
 
 .Creative-pro, .Creative-pro h3{
 

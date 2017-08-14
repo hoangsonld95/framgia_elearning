@@ -19,6 +19,7 @@ class Answer extends BaseModel
         'answer_content',
         'correct',
         'question_id',
+        'desc',
     ];
 
     public function Question()

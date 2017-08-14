@@ -13,40 +13,16 @@
 
     {{ HTML::style('/assets/bower/bootstrap/dist/css/bootstrap.min.css') }}
     {{ HTML::style('/assets/bower/bootstrap/dist/css/bootstrap-theme.css') }}
-    {{ HTML::style('/assets/bower/elegant-icons/css/style.css') }}
     {{ HTML::style('/assets/bower/components-font-awesome/css/font-awesome.min.css') }}
     {{ HTML::style('/assets/bower/owl.carousel/dist/assets/owl.carousel.css') }}
-    {{ HTML::style('/assets/bower/jquery-ui/themes/base/jquery-ui.min.css') }}
     {{ HTML::style('/css/style.css') }}
     {{ HTML::style('/css/style-responsive.css') }}
-    {{ HTML::style('/assets/bower/bootstrap-select/dist/css/bootstrap-select.min.css') }}
 
     {{ HTML::script('/assets/bower/jquery/dist/jquery.min.js') }}
-    {{ HTML::script('/js/jquery.rateit.min.js') }}
-    {{ HTML::script('/assets/bower/jquery.customSelect/jquery.customSelect.min.js') }}
     {{ HTML::script('/js/scripts.js') }}
-    {{ HTML::script('/js/jquery.autosize.min.js') }}
-    {{ HTML::script('/js/sparklines.js') }}
-    {{ HTML::script('/js/jquery.slimscroll.min.js') }}
     {{ HTML::script('/assets/bower/bootstrap/dist/js/bootstrap.min.js') }}
-    {{ HTML::script('/assets/bower/jquery-knob/js/jquery.knob.js') }}
     {{ HTML::script('/assets/bower/owl.carousel/dist/owl.carousel.js') }}
-    {{ HTML::script('/assets/bower/jquery-ui/jquery-ui.min.js') }}
-    {{ HTML::script('/assets/bower/jquery-placeholder/jquery.placeholder.min.js') }}
-    {{ HTML::script('/assets/bower/bootstrap-select/dist/js/bootstrap-select.min.js') }}
 
-    {{ HTML::script('/assets/bower/jquery/dist/jquery.min.js') }}
-    {{ HTML::script('/js/jquery.rateit.min.js') }}
-    {{ HTML::script('/assets/bower/jquery.customSelect/jquery.customSelect.min.js') }}
-    {{ HTML::script('/js/scripts.js') }}
-    {{ HTML::script('/js/jquery.autosize.min.js') }}
-    {{ HTML::script('/js/sparklines.js') }}
-    {{ HTML::script('/js/jquery.slimscroll.min.js') }}
-    {{ HTML::script('/assets/bower/bootstrap/dist/js/bootstrap.min.js') }}
-    {{ HTML::script('/assets/bower/jquery-knob/js/jquery.knob.js') }}
-    {{ HTML::script('/assets/bower/owl.carousel/dist/owl.carousel.js') }}
-    {{ HTML::script('/assets/bower/jquery-ui/jquery-ui.min.js') }}
-    {{ HTML::script('/assets/bower/jquery-placeholder/jquery.placeholder.min.js') }}
 </head>
 
 <body>
@@ -61,7 +37,8 @@
     @yield('courses')
     @yield('subjects')
     @yield('questions')
-
+    @yield('edit_question')
+    @yield('create_answer')
 </section>
 
 </body>

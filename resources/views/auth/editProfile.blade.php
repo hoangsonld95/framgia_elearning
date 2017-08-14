@@ -10,12 +10,12 @@
             {{ csrf_field() }}
             <ul class="change-profile">
                 <li class="">
-                    <input type="file" name="avatar" id="file-1" class="inputfile inputfile-1 col-md-4 col-md-offset-4" data-multiple-caption="{count} files selected" multiple />
+                    <input type="file" name="avatar" class="inputfile inputfile-1 col-md-4 col-md-offset-4" data-multiple-caption="{count} files selected" multiple />
                     <label for="file-1"> <span>Choose a file&hellip;</span></label>
                 </li>
                 <li class="row">
                     <label class="col-md-4">@lang('auth.email')</label>
-                    {!!Form::email('user-email', $value = $user['email'], ['class' => 'col-md-4 form-control profile-input', 'disabled' => 'disabled'])!!}
+                    {!!Form::email('user-email', $value = $user['email'], ['class' => 'col-md-offset-4 col-md-4 form-control profile-input', 'disabled' => 'disabled'])!!}
                 </li>
                 <li class="row">
                     <label class="col-md-4 control-label">@lang('auth.name')</label>

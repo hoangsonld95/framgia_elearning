@@ -36,6 +36,6 @@ class Course extends BaseModel
 
     public function subject()
     {
-        return $this->belongsTo('App\Models\Subject');
+        return $this->belongsTo(Subject::class);
     }
 }

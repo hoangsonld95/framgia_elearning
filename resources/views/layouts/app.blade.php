@@ -17,12 +17,13 @@
     <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
     <link href="{{ asset('css/themes.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
 <body>
 <div class="page-container">
     <header>
         <div class="container">
-            <a href="{{route('home')}}" class="site-logo">
+            <a href="{{route('welcome')}}" class="site-logo">
                 <i class="gi gi-flash"></i> <strong>E-Learning</strong>
             </a>
             <nav>
@@ -134,5 +135,6 @@
 <!-- Scripts -->
 <script src="{{ asset('assets/bower/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/login.js') }}"></script>
 </body>
 </html>

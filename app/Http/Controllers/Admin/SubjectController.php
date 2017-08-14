@@ -31,7 +31,6 @@ class SubjectController extends Controller
     }
 
     public function deleteSubject($subject_id) {
-        $deletedCourse = \App\Models\Course::where('subject_id', '=', $subject_id)->delete();
         $deletedSubject = Subject::where('id', '=', $subject_id)
                             ->update(['hidden' => 1]);
         return redirect()->route('admin_subjects');

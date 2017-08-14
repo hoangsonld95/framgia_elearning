@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'active' => false,
             'point' => 0,
             'avatar' => 'default',
+            'is_admin' => false,
         ]);
     }
 
